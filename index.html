@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ludo 4x4</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ludo — 2 Player</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+  <header class="topbar">
+    <h1>Ludo — 2 Player</h1>
+    <div class="panel">
+      <div class="status">
+        <div>Turn: <span id="turnLabel">Red</span></div>
+        <div>Dice: <span id="diceValue">-</span></div>
+      </div>
+      <button id="rollBtn" class="btn">Roll Dice</button>
+      <button id="resetBtn" class="btn btn-ghost">Reset</button>
+    </div>
+  </header>
 
-<h2>4×4 Ludo Game</h2>
+  <main class="wrap">
+    <canvas id="board" width="720" height="720"></canvas>
+    <aside class="legend">
+      <h3>How to play</h3>
+      <ul>
+        <li>Click <b>Roll Dice</b>, then click a highlighted token to move.</li>
+        <li>Roll a <b>6</b> to bring a token out from base.</li>
+        <li><b>6</b> gives an extra turn.</li>
+        <li>Landing on an opponent sends them to base (start squares are safe).</li>
+        <li>Exact roll to enter <b>Home</b>.</li>
+      </ul>
+      <div class="hint">Valid tokens glow after you roll.</div>
+      <div class="credits">Made for teaching: HTML + CSS + JS only.</div>
+    </aside>
+  </main>
 
-<div class="board">
-  <div class="cell red"></div>
-  <div class="cell"></div>
-  <div class="cell"></div>
-  <div class="cell blue"></div>
+  <footer class="footer">
+    <span>Players: </span>
+    <span class="pill pill-red">Red</span>
+    <span class="pill pill-blue">Blue</span>
+  </footer>
 
-  <div class="cell"></div>
-  <div class="cell"></div>
-  <div class="cell"></div>
-  <div class="cell"></div>
-
-  <div class="cell"></div>
-  <div class="cell"></div>
-  <div class="cell"></div>
-  <div class="cell"></div>
-
-  <div class="cell green"></div>
-  <div class="cell"></div>
-  <div class="cell"></div>
-  <div class="cell yellow"></div>
-</div>
-
-<p>Click a colored box to move it</p>
-
-<script src="ludo.js"></script>
+  <script src="ludo.js"></script>
 </body>
 </html>
